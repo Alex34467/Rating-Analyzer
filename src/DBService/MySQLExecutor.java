@@ -1,7 +1,6 @@
 package DBService;
 
 import Utility.MyLogger;
-
 import java.sql.*;
 import java.util.logging.Level;
 
@@ -10,9 +9,9 @@ public class MySQLExecutor implements DBExecutor
 {
     // Данные.
     private static MySQLExecutor instance;
-    private static final String url = "jdbc:mysql://localhost:3306/gbi";
-    private static  final String user = "root";
-    private static  final String password = "1001";
+    private static final String url = "jdbc:mysql://31.31.196.170:3306/u0389727_gbra13";
+    private static final String user = "u0389_user";
+    private static final String password = "rjvfylf1";
     private Statement statement;
 
 

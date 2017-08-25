@@ -1,5 +1,6 @@
 package Main;
 
+import DBService.DBService;
 import PageProcessing.CrawlerManager;
 import java.io.*;
 import java.util.logging.LogManager;
@@ -11,6 +12,9 @@ public class Main
     // Точка входа.
     public static void main(String[] args)
     {
+        // Тест подключения.
+        DBService.getInstance();
+
         // Настройка логгера.
         try
         {
@@ -23,6 +27,6 @@ public class Main
         }
 
         // Запуск краулера.
-        new CrawlerManager().start(60);
+        //new CrawlerManager().start(60);
     }
 }
