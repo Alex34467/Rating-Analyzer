@@ -72,19 +72,22 @@ public class MySQLExecutor implements DBExecutor
     // Подключение.
     private void connect()
     {
-        MyLogger.log(Level.INFO, "Connecting to DB.");
+        MyLogger.log(Level.INFO, "Connecting to DB at " + url);
+        System.out.println("Connecting to DB at " + url);
         try
         {
             // Плдключение.
             Connection connection = DriverManager.getConnection(url, user, password);
             MyLogger.log(Level.INFO, "Successfully connected to database.");
+            System.out.println("Successfully connected to database.");
 
             // Создание состояния.
             statement = connection.createStatement();
         }
         catch (SQLException e)
         {
-            MyLogger.log(Level.SEVERE, "Connection failed.");
+            MyLogger.log(Level.SEVERE, "Connection failed: " + e.getMessage());
+            System.out.println("Connection failed: " + e.getMessage());
         }
     }
 }
